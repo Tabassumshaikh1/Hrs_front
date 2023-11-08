@@ -1,0 +1,21 @@
+<!-- <div [formGroup]="parentForm">
+    <label for="inputField">{{label}}</label>
+    <input [type]="fieldType" id="inputField" [formControlName]="controlName" />
+  </div> -->
+  <div class="container" [class]="class">
+  <mat-form-field class="custom-input-field" appearance="outline" [formGroup]="parentForm">
+    <mat-label>{{label}}</mat-label>
+    <input matInput [type]="fieldType" id="inputField" [formControlName]="controlName" class="pt-2" [maxlength]="maxLength">
+    <mat-icon matSuffix>{{icon}}</mat-icon>
+  </mat-form-field>
+  <div class="validation">
+    <div *ngIf="validationData.hasError('required') && validationData.touched" class="text-danger">
+      {{label}} is required *.
+    </div>
+      <div *ngIf="validationData.hasError('pattern')" class="text-danger">
+        Enter a valid {{label}}.
+      </div>
+
+  </div>
+ 
+  </div>

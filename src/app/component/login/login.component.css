@@ -1,0 +1,9 @@
+
+button{
+    width: 35%;
+    border-radius: 15px;
+  }
+.text-danger{
+  margin-left: -35px;
+  margin-top: -11px;
+}

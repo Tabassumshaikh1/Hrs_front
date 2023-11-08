@@ -1,0 +1,8 @@
+nav{
+    background-color:#2F3C7E;
+}
+nav > a, form>a {
+    color:#FBEAEB;
+    font-weight: 550;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

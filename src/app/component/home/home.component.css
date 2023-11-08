@@ -1,0 +1,12 @@
+.card-group,.card>img{
+    height: 84vh;
+    width: auto;
+    border: none;
+    /* overflow: ; */
+}
+.card{
+    background-color: #2F3C7E;
+    color: #FBEAEB;
+    border: none;
+    border-radius: 0;
+}

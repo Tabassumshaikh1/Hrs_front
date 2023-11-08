@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+.custom-input-field {
+    width: 140%;
+    margin-left: -40px;
+}
+
+.validation {
+    margin-top: 4.70rem !important;
+    position: fixed;
+}
