@@ -23,6 +23,10 @@ export class RegisterComponent {
   }
   Submit(registerForm:any){
     try {
+      if(registerForm.invalid){
+        this.notifySvc.showError(`All Fields are mandatory Please check once`)
+        return 
+      }
       this.authSer.register(registerForm.value).subscribe((res:any)=>{
         console.log("Res is",res)
        if(res.status==0){

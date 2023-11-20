@@ -6,5 +6,7 @@
         <a class="navbar-brand" routerLink="/contactus">Contact Us</a>
         <a class="navbar-brand" routerLink="/service">Services</a>
         <a class="navbar-brand" routerLink="/getquote">Get a quote</a>
-        <button mat-raised-button color="primary" class="" routerLink="/login">Login</button>
-    </form> </nav>
+        <button *ngIf="!isLogin" mat-raised-button color="primary" routerLink="/login">Login</button>
+        <button *ngIf="isLogin" mat-raised-button color="accent" (click)="Logout()">Logout</button>     
+    </form> 
+</nav>

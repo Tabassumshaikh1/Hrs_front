@@ -13,4 +13,18 @@ export class AuthService {
   register(data:any){  
       return this.http.post(`${this.apiUrl}auth/regis`, data)
     }
+  loginUserCheck(){
+    const userCheck = localStorage.getItem("token");
+    console.log("USerCheck",userCheck)
+    if(userCheck === null){
+      return false
+    }
+    else{
+      return true 
+    }
+  }
+  logout(){
+    localStorage.removeItem('token')
+    return {msg:"Logout successfully!"}
+  }
   }

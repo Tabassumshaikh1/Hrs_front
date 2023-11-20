@@ -7,6 +7,9 @@ import { ServicesComponent } from './component/services/services.component';
 import { GetquoteComponent } from './component/getquote/getquote.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { TanckerDashboardComponent } from './component/tancker-dashboard/tancker-dashboard.component';
+import { BookTanckerComponent } from './component/book-tancker/book-tancker.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -15,7 +18,10 @@ const routes: Routes = [
   {path:'service',component:ServicesComponent},
   {path:'getquote',component:GetquoteComponent},
   {path:'login', component:LoginComponent},
-  {path:'register',component:RegisterComponent}
+  {path:'register',component:RegisterComponent},
+  {path:'dashboard',component:DashboardComponent},
+  {path:'tanckerDash',component:TanckerDashboardComponent},
+  {path:'bookTancker/:id',component:BookTanckerComponent} 
 ];
 
 @NgModule({

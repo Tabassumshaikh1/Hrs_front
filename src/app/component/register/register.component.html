@@ -30,36 +30,18 @@
           label="Password"
           fieldType="password"
           class="m-4 my-2"
-          icon="remove_red_eye"
+          icon="visibility"
           [validationData]="registerForm.get('password')"
         ></app-shared-input>
-        <!-- <div *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched" class="text-center text-danger p-1">
-          Password is required *.
-        </div>
-        <div *ngIf="registerForm.get('password')?.hasError('pattern')" class="text-center text-danger">
-          Enter Valid password in this form Abc@123.
-        </div>
-        <div *ngIf="registerForm.get('password')?.hasError('minlength')" class="text-center mt-2 text-danger">
-          Password must be at least 6 characters long.
-        </div> -->
         <app-shared-input
         [parentForm]="registerForm"
         controlName="confirmpassword"
         label="Confirm Password"
         fieldType="password"
         class="m-4 my-2"
-        icon="remove_red_eye"
+        icon="visibility"
         [validationData]="registerForm.get('password')"
       ></app-shared-input>
-      <!-- <div *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched" class="text-center text-danger p-1">
-        Password is required *.
-      </div>
-      <div *ngIf="registerForm.get('password')?.hasError('pattern')" class="text-center text-danger">
-        Enter Valid password in this form Abc@123.
-      </div>
-      <div *ngIf="registerForm.get('password')?.hasError('minlength')" class="text-center mt-2 text-danger">
-        Password must be at least 6 characters long.
-      </div> -->
     </div>
     <div class="d-flex">
         <app-shared-input

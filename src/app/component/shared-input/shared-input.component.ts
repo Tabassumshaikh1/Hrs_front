@@ -1,4 +1,4 @@
-import { Component, Input, } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild, } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -15,4 +15,15 @@ export class SharedInputComponent {
   @Input() icon: string = 'text';
   @Input() validationData: any;
   @Input() maxLength:any
+  showPassword!:string;
+  passwordHide:boolean = false
+
+  visibility(){
+    this.showPassword='text'
+    this.passwordHide=true
+  }
+  resetVisibility(){
+    this.showPassword='password'
+    this.passwordHide=false
+  }
 }

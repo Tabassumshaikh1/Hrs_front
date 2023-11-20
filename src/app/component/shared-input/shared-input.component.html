@@ -5,8 +5,12 @@
   <div class="container" [class]="class">
   <mat-form-field class="custom-input-field" appearance="outline" [formGroup]="parentForm">
     <mat-label>{{label}}</mat-label>
-    <input matInput [type]="fieldType" id="inputField" [formControlName]="controlName" class="pt-2" [maxlength]="maxLength">
-    <mat-icon matSuffix>{{icon}}</mat-icon>
+    <input matInput *ngIf="controlName!='password'" [type]="fieldType" id="inputField" [formControlName]="controlName" class="pt-2" [maxlength]="maxLength">
+    <mat-icon matSuffix *ngIf="controlName!='password'">{{icon}}</mat-icon>
+    <input matInput *ngIf="controlName=='password'" [type]="showPassword =='text' ?'text':'password'" id="inputField" [formControlName]="controlName" class="pt-2" [maxlength]="maxLength">
+    <mat-icon matSuffix *ngIf="controlName=='password' && passwordHide" (click)="resetVisibility()">{{icon}}</mat-icon>
+    <mat-icon matSuffix *ngIf="controlName=='password' && !passwordHide" (click)="visibility()">visibility_off</mat-icon>
+
   </mat-form-field>
   <div class="validation">
     <div *ngIf="validationData.hasError('required') && validationData.touched" class="text-danger">

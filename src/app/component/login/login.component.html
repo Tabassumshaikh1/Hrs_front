@@ -17,12 +17,13 @@
         controlName="password"
         label="Password"
         fieldType="password"
-        icon="remove_red_eye"
+        icon="visibility"
+        
         [validationData]="loginForm.get('password')"
       ></app-shared-input>
      
       <div class="text-center">
-        <button mat-raised-button color="primary" class="p-4" (click)="Submit(loginForm)">Login</button>
+        <button mat-raised-button color="primary" class="p-4" (click)="Submit()">Login</button>
         <h3 class="mt-3">Don't Have an account? <a routerLink="/register">Register Here</a></h3>
       </div>
 

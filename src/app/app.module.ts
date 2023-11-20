@@ -22,6 +22,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule,ReactiveFormsModule  }   from '@angular/forms';
 import { SharedInputComponent } from './component/shared-input/shared-input.component';
 import { ToastrModule } from 'ngx-toastr';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { TanckerDashboardComponent } from './component/tancker-dashboard/tancker-dashboard.component';
+import { BookTanckerComponent } from './component/book-tancker/book-tancker.component';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import { ToastrModule } from 'ngx-toastr';
     LoginComponent,
     RegisterComponent,
     
-    SharedInputComponent
+    SharedInputComponent,
+         DashboardComponent,
+         TanckerDashboardComponent,
+         BookTanckerComponent
   ],
   imports: [
     BrowserModule,
